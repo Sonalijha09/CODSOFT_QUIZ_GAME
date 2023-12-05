@@ -1,0 +1,44 @@
+print("WELCOME FOR PYTHON QUIZ GAME")
+score=0
+ques_no=0
+questions = ("1.Which Bollywood actor has been declared as the ‘National Icon’ of Election Commission of India in 2022??",
+    "2.Which Bollywood celebrity is the brand ambassador for the Chinese smartphone firm Tecno??",
+    "3.What is the name of the National-award winning Bollywood choreographer, who passed away in 2020??",
+    "4.Who directed the film “Lagaan”?")
+choices = (("A. Pankaj Tripathi","B.  Manoj Bajpayee","C.Rajkummar Rao","D. Nawazuddin Siddiqui"),
+    ("A.  Amitabh Bachan","B. Shah Rukh Khan","C. Ayushmann Khurana","D. Vidyut Jamwal"),
+    ("A. Protik Prakash","B. Tridib Ghosh","C. Geetha Nagabhushan","D. Saroj Khan"),
+   ("A. Karan Johar","B.  Sanjay Leela Bhansali","C. Farhan Akhtar","D. Ashutosh Gowariker"))
+answers = ("A", "C", "D", "C", "B")
+guesses = []
+for question in questions:
+    print(question)
+    for choice in choices[ques_no]:
+        print(choice)
+    guess = input("Enter (A, B, C, D): ").upper()
+    guesses.append(guess)
+    if guess == answers[ques_no]:
+        score += 1
+        print("CORRECT!")
+    else:
+        print("INCORRECT!")
+        print(f"{answers[ques_no]} is the correct answer")
+    ques_no+= 1
+print("YOUR TOTAL SCORE IS=",score)
+if score==0:
+    print("YOU NEED MORE PRACTICE")
+elif score==1:
+    print("FOCUS MORE")
+elif score==2:
+    print("IMPROVING")
+elif score==3:
+    print("SO BETTER")
+elif score==4:
+    print("EXCELLENT")
+else:
+    print("HOPE YOU ENJOYED THE GAME")
+playing=input("DO YOU WANT TO TRY AGAIN THIS PYTHON QUIZ GAME?= ")
+if playing=="YES":
+    print("OKAY LET'S MOVE TO IT AGAIN!")
+else:
+    print("SEE YOU SOON!")
